@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import studyImage from './cat_study.png';
 import './App.css';
-import Login from './pages/Login/Login';
+import Login from './pages/Login/LoginPage';
 
 function App() {
   const navigate = useNavigate();
