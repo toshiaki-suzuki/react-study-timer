@@ -1,0 +1,21 @@
+/* Record.css */
+.record {
+  background-color: #282c34;
+  border: 2px solid white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  color: white;
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+  width: 200px;
+}
+
+.record h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.record p {
+  font-size: 18px;
+}
