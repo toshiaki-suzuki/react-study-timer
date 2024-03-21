@@ -1,15 +1,15 @@
 import './Record.css';
 
-type RecordProps = {
-  subject: string;
-  duration: number;
+export type RecordProps = {
+  material: string;
+  learningTime: number;
 };
 
-const Record = ({ subject, duration }: RecordProps) => {
+const Record = ({ material, learningTime }: RecordProps) => {
   return (
     <div className="record">
-      <h3>{subject}</h3>
-      <p>{duration}分</p>
+      <h3>{material}</h3>
+      <p>{learningTime}分</p>
     </div>
   );
 };
