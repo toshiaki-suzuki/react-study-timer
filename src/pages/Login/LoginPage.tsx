@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { AuthContext } from '../../contexts/authContext';
 import './LoginPage.css';
 
-function AppRouter() {
+function Login() {
+  const navigate = useNavigate();
+  const { setAuth } = useContext(AuthContext);
+
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
@@ -12,7 +17,10 @@ function AppRouter() {
         email: email,
         password: password
       });
-      console.log(response.data);
+      const token = response.data.token;
+      setAuth({ token });
+      console.log("Accept Token");
+      navigate('/records');
     } catch (error) {
       console.error(error);
     }
@@ -32,4 +40,4 @@ function AppRouter() {
   );
 }
 
-export default AppRouter;
+export default Login;
