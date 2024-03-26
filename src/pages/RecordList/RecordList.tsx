@@ -25,8 +25,10 @@ function RecordList() {
 
   useEffect(() => {
     const fetchRecords = async () => {
-      const data = await getRecords(token);
-      setRecords(data);
+      if (token) {
+        const data = await getRecords(token);
+        setRecords(data);
+      }
     };
 
     fetchRecords();
