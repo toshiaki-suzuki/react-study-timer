@@ -1,4 +1,17 @@
-/* src/pages/RecordDetail/RecordDetail.css */
-.record-detail {
-    padding: 20px;
-}
+.record-detail table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  .record-detail th,
+  .record-detail td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    border-color: #ddd;
+  }
+
+  .record-detail th {
+    color: #33a7c7;
+    background-color: #f2f2f2;
+  }
