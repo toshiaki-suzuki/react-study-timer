@@ -6,6 +6,7 @@ import Record from '../../components/Record/Record';
 import './RecordList.css';
 import type { RecordProps } from '../../components/Record/Record';
 import { AuthContext } from '../../contexts/authContext';
+import RecordLink from '../../components/RecordLink/RecordLink';
 
 const getRecords = async (token: string | null) => {
   try {
@@ -43,9 +44,7 @@ function RecordList() {
       </header>
       <main className="record-list-main">
         {records.map((record: RecordProps) => (
-          <Link key={record.id} to={`/records/${record.id}`}>
-            <Record id={record.id} material={record.material} learningTime={record.learningTime} />
-          </Link>
+          <RecordLink key={record.id} record={record} />
         ))}
       </main>
     </div>
