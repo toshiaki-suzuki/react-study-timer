@@ -24,7 +24,7 @@ function RecordDetail() {
   useEffect(() => {
     const fetchRecord = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/records/${id}`, {
+        const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/records/${id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

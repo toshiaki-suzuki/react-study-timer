@@ -10,7 +10,7 @@ import RecordLink from '../../components/RecordLink/RecordLink';
 
 const getRecords = async (token: string | null) => {
   try {
-    const response = await axios.get('http://localhost:3000/records', {
+    const response = await axios.get(`${process.env.REACT_APP_BASE_URL}/records`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },

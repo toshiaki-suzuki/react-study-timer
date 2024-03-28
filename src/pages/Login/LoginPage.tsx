@@ -13,7 +13,7 @@ function Login() {
 
   const handleLogin = async () => {
     try {
-      const response = await axios.post('http://localhost:3000/auth/sign-in', {
+      const response = await axios.post(`${process.env.REACT_APP_BASE_URL}/auth/sign-in`, {
         email: email,
         password: password
       });
