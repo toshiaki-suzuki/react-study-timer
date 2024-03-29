@@ -5,6 +5,7 @@ import Top from "./pages/Top/TopPage";
 import Login from "./pages/Login/LoginPage";
 import RecordList from "./pages/RecordList/RecordList";
 import Record from "./pages/RecordDetail/RecordDetailPage";
+import RecordCreate from "./pages/RecordCreate/RecordCreatePage";
 import ErrorPage from "./pages/Error/ErrorPage";
 import AuthProvider from "./contexts/authContext";
 
@@ -18,6 +19,7 @@ const routesBasic = createBrowserRouter([
       { path: '/login', element: <Login />, errorElement: <ErrorPage /> },
       { path: '/records', element: <RecordList />, errorElement: <ErrorPage /> },
       { path: '/records/:id', element: <Record />, errorElement: <ErrorPage /> },
+      { path: '/records/create', element: <RecordCreate />, errorElement: <ErrorPage /> },
     ],
   },
 ]);
