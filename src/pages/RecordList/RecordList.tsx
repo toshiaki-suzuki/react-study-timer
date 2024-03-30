@@ -41,6 +41,9 @@ function RecordList() {
     <div className="record-list">
       <header className="record-list-header">
         <h1>私の学習記録</h1>
+        <Link to="/records/create" className="create-link">
+          新規作成
+        </Link>
       </header>
       <main className="record-list-main">
         {records.map((record: RecordProps) => (
