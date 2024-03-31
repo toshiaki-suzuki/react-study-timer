@@ -26,3 +26,11 @@
   border: none;
   cursor: pointer;
 }
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+}

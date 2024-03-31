@@ -7,6 +7,7 @@ import './RecordCreatePage.css';
 function RecordCreate() {
   const [material, setMaterial] = useState('');
   const [learningTime, setLearningTime] = useState(0);
+  const [errorMessage, setErrorMessage] = useState('');
   const { token } = useContext(AuthContext);
   const navigate = useNavigate();
 
@@ -26,15 +27,17 @@ function RecordCreate() {
           },
         }
       );
-      navigate('/records');
+      navigate('/records', { state: { message: '新しいレコードが作成されました' } });
     } catch (error) {
       console.error('Failed to create record:', error);
+      setErrorMessage('レコードの作成に失敗しました');
     }
   };
 
   return (
     <div className="record-create">
       <h1>レコードの作成</h1>
+      {errorMessage && <div className="error-message">{errorMessage}</div>}
       <form onSubmit={handleSubmit}>
         <div>
           <label htmlFor="material">教材:</label>

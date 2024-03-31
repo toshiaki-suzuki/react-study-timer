@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Record from '../../components/Record/Record';
 import './RecordList.css';
@@ -24,7 +24,16 @@ const getRecords = async (token: string | null) => {
 
 function RecordList() {
   const [records, setRecords] = useState([]);
+  const [successMessage, setSuccessMessage] = useState('');
   const { token } = useContext(AuthContext);
+  const location = useLocation();
+
+  useEffect(() => {
+    const message = location.state?.message;
+    if (message) {
+      setSuccessMessage(message);
+    }
+  }, [location.state]);
 
   useEffect(() => {
     const fetchRecords = async () => {
@@ -44,6 +53,7 @@ function RecordList() {
         <Link to="/records/create" className="create-link">
           新規作成
         </Link>
+        {successMessage && <div className="success-message">{successMessage}</div>}
       </header>
       <main className="record-list-main">
         {records.map((record: RecordProps) => (
