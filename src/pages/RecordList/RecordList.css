@@ -54,3 +54,59 @@
   margin-bottom: 20px;
   border-radius: 4px;
 }
+
+.delete-dialog-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-dialog {
+  background-color: white;
+  padding: 20px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.delete-dialog p {
+  margin-bottom: 20px;
+  color: black;
+}
+
+.delete-dialog button {
+  margin: 0 10px;
+}
+
+.delete-dialog button.delete-confirm {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-dialog button.delete-confirm:hover {
+  background-color: #cc0000;
+}
+
+.delete-dialog button.delete-cancel {
+  background-color: #ccc;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.delete-dialog button.delete-cancel:hover {
+  background-color: #999;
+}

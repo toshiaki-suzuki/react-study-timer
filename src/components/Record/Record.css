@@ -19,3 +19,16 @@
 .record p {
   font-size: 18px;
 }
+
+.record button.delete-button {
+  background-color: #ff0000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.record button.delete-button:hover {
+  background-color: #cc0000;
+}
